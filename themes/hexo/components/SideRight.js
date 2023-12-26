@@ -40,7 +40,7 @@ export default function SideRight(props) {
   const { locale } = useGlobal()
   return (
     <div id='sideRight' className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
-  // 删除右侧简介 <InfoCard {...props} /> 
+
 
       {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && <AnalyticsCard {...props} />}
 
@@ -61,6 +61,7 @@ export default function SideRight(props) {
         </Card>
       )}
       {siteConfig('HEXO_WIDGET_LATEST_POSTS', null, CONFIG) && latestPosts && latestPosts.length > 0 && <Card>
+        
         <LatestPostsGroup {...props} />
       </Card>}
 
