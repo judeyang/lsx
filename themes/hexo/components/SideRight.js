@@ -40,7 +40,9 @@ export default function SideRight(props) {
   const { locale } = useGlobal()
   return (
     <div id='sideRight' className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
-      <InfoCard {...props} />
+     /** <InfoCard {...props} /> 
+     删除简介
+     **/ 
       {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && <AnalyticsCard {...props} />}
 
       {showCategory && (
