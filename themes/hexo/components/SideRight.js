@@ -42,24 +42,7 @@ export default function SideRight(props) {
     <div id='sideRight' className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
 
 
-      {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && <AnalyticsCard {...props} />}
-
-      {showCategory && (
-        <Card>
-          <div className='ml-2 mb-1 '>
-            <i className='fas fa-th' /> {locale.COMMON.CATEGORY}
-          </div>
-          <CategoryGroup
-            currentCategory={currentCategory}
-            categories={categories}
-          />
-        </Card>
-      )}
-      {showTag && (
-        <Card>
-          <TagGroups tags={tags} currentTag={currentTag} />
-        </Card>
-      )}
+     
       {siteConfig('HEXO_WIDGET_LATEST_POSTS', null, CONFIG) && latestPosts && latestPosts.length > 0 && <Card>
         
         <LatestPostsGroup {...props} />
